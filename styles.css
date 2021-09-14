@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+
+* {
+  margin: 0 auto;
+  padding: none; 
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  background-color: whitesmoke;
+  height: 768px;
+  width: 1024px;
+}
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2em;
+}
+.qnum {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em; 
+}
+.question {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1em;
+}
+.choices-container {
+  width: 75%;
+  background-color: white;
+  height: 50%;
+  padding: 25px; 
+}
+.choices {
+  width: 90%; 
+  height: 2.1em;
+  background-color: whitesmoke;
+  margin: 1em;
+  border-radius: 5px;
+  align-items: center;
+}
+.btnclicker {
+  width: 25px;
+  height: 25px;
+}
+
