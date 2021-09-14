@@ -40,10 +40,11 @@
   background-color: whitesmoke;
   margin: 1em;
   border-radius: 5px;
-  align-items: center;
+  padding: 5px 0; 
 }
 .btnclicker {
   width: 25px;
   height: 25px;
+  margin: 5px; 
 }
 
