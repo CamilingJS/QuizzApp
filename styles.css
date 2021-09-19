@@ -50,8 +50,10 @@
 .optionContainer {
   background-color: whitesmoke;
   height: 2em;
+  width: 95%;
   padding-top: 5px;
   border-bottom: 3px solid white;
+  flex-wrap: wrap;
 }
 
 .submitBtn {
@@ -60,5 +62,22 @@
   color: white;
   height: 30px;
 }
+
+.form {
+  width: 90%;
+  display: none; 
+}
+.activeQuestion {
+  display: block;
+  animation: fade 1s; 
+}
+.qnum {
+  display: none; 
+}
+.qnumActive {
+  display: block; 
+  animation: fade 1s; 
+}
+
 
 
