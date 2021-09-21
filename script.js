@@ -33,7 +33,6 @@ let questionsArr = [
 
 const MAX_QUESTIONS =3
 
-
 startQuiz = () => {
   questionCounter = 0
   availableQuestions = [...questionsArr]
@@ -48,7 +47,20 @@ getNewQuestion = () => {
   questionCounter++
   questionNums.innerText = `Question ${questionCount} / ${MAX_QUESTIONS}`
 
-  currentQuestion = availableQuestions[]
+  const questionIndex = Math.floor(Math.random() * availableQuestions.length)
+  currentQuestion = availableQuestions[questionIndex]
+  question.innerText = currentQuestion.question
+
+  choices.forEach(choice => {
+    const number = choice.dataset['number']
+    choice.innerText = currentQuestion['choice' + number]
+  })
+
+  availableQuestions.splice(questionIndex, 1)
+
+  acceptingAnswers = true
 }
+
+
 
 
