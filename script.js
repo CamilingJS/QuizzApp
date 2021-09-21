@@ -31,7 +31,7 @@ let questionsArr = [
   }
 ]
 
-const MAX_QUESTIONS =4
+const MAX_QUESTIONS =3
 
 
 startQuiz = () => {
@@ -47,6 +47,8 @@ getNewQuestion = () => {
 
   questionCounter++
   questionNums.innerText = `Question ${questionCount} / ${MAX_QUESTIONS}`
+
+  currentQuestion = availableQuestions[]
 }
 
 
