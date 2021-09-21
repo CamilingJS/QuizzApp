@@ -1,6 +1,6 @@
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
-const questionNums = document.quertySelector('qnum');
+const questionNums = document.querySelector('qnum');
 const submitBtn = document.getElementsByClassName('submitBtn');
 
 let currentQuestion = {}
@@ -33,34 +33,48 @@ let questionsArr = [
 
 const MAX_QUESTIONS =3
 
-startQuiz = () => {
-  questionCounter = 0
-  availableQuestions = [...questionsArr]
-  getNewQuestion()
-}
+// startQuiz = () => {
+//   questionCounter = 0
+//   availableQuestions = [...questionsArr]
+//   getNewQuestion()
+// }
 
-getNewQuestion = () => {
-  if(availableQuestions.length === 0 || questionsCounter > MAX_QUESTIONS ){
-    localStorage.setItem('')
-  }
+// getNewQuestion = () => {
+//   if(availableQuestions.length === 0 || questionsCounter > MAX_QUESTIONS ){
+//     localStorage.setItem('')
+//   }
 
-  questionCounter++
-  questionNums.innerText = `Question ${questionCount} / ${MAX_QUESTIONS}`
+//   questionCounter++
+//   questionNums.innerText = `Question ${questionCount} / ${MAX_QUESTIONS}`
 
-  const questionIndex = Math.floor(Math.random() * availableQuestions.length)
-  currentQuestion = availableQuestions[questionIndex]
-  question.innerText = currentQuestion.question
+//   const questionIndex = Math.floor(Math.random() * availableQuestions.length)
+//   currentQuestion = availableQuestions[questionIndex]
+//   question.innerText = currentQuestion.question
 
-  choices.forEach(choice => {
-    const number = choice.dataset['number']
-    choice.innerText = currentQuestion['choice' + number]
-  })
+//   choices.forEach(choice => {
+//     const number = choice.dataset['number']
+//     choice.innerText = currentQuestion['choice' + number]
+//   })
 
-  availableQuestions.splice(questionIndex, 1)
+//   availableQuestions.splice(questionIndex, 1)
 
-  acceptingAnswers = true
-}
+//   acceptingAnswers = true
+// }
 
 
+// function setNewActive(){
+//   let quizBodies = document.getElementsByClassName('form')
+//   for (quizBody of quizBodies){
+//     quizBoy.classList.remove('activeQuestion')
+//   }
+//   document.getElementById(el.textContent.trim()).classList.add('activeQuestion')
+
+// }
+
+const button = document.querySelector('submitBtn');
+
+button.addEventListener("click", (e) => {
+  console.log(e.target)
+})
 
 
