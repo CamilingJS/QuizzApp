@@ -1,80 +1,20 @@
-const question = document.querySelector('#question');
-const choices = Array.from(document.querySelectorAll('.choice-text'));
-const questionNums = document.querySelector('qnum');
-const submitBtn = document.getElementsByClassName('submitBtn');
+const questions = document.querySelectorAll('.form')
+const button = document.querySelector('.submitBtn');
 
-let currentQuestion = {}
-let acceptingAnswers = true
-let availableQuestions = []
-
-let questionsArr = [
-  {questiion: "Which of the following is not a real eCommerce platform?",
-   choice1: "Shopify", 
-   choice2: "WooCommerce",
-   choice3: "ShopCommerce",
-   choice4: "BigCommerce",
-   answer: "ShopCommerce"
-  },
-  {questiion: "If Shopify is so good, why are Shopify developers necessary?",
-   choice1:"To save time on things like store setups and migrations",
-   choice2:"To extend the limited design options and funcationalities of themes with custom code",
-   choice3:"To provide support with a deep understanding of how the platform works and what its limitations are",
-   choice4:"All the above",
-   answer:"All the above"
-  },
-  {questiion: "If Shopify is so good, why are Shopify developers necessary?",
-  choice1:"They are paid extremely well",
-  choice2:"There is a high demand for them",
-  choice3:"They need to know web development, the platform itself, and the liquid template language",
-  choice4:"All the above",
-  answer:"All the above"  
+const submit = () => {
+  for (let i = 0; i < questions.length; i++) {
+    questions[i].classList.remove('activeQuestion')
   }
-]
-
-const MAX_QUESTIONS =3
-
-// startQuiz = () => {
-//   questionCounter = 0
-//   availableQuestions = [...questionsArr]
-//   getNewQuestion()
-// }
-
-// getNewQuestion = () => {
-//   if(availableQuestions.length === 0 || questionsCounter > MAX_QUESTIONS ){
-//     localStorage.setItem('')
-//   }
-
-//   questionCounter++
-//   questionNums.innerText = `Question ${questionCount} / ${MAX_QUESTIONS}`
-
-//   const questionIndex = Math.floor(Math.random() * availableQuestions.length)
-//   currentQuestion = availableQuestions[questionIndex]
-//   question.innerText = currentQuestion.question
-
-//   choices.forEach(choice => {
-//     const number = choice.dataset['number']
-//     choice.innerText = currentQuestion['choice' + number]
-//   })
-
-//   availableQuestions.splice(questionIndex, 1)
-
-//   acceptingAnswers = true
-// }
-
-
-// function setNewActive(){
-//   let quizBodies = document.getElementsByClassName('form')
-//   for (quizBody of quizBodies){
-//     quizBoy.classList.remove('activeQuestion')
-//   }
-//   document.getElementById(el.textContent.trim()).classList.add('activeQuestion')
-
-// }
-
-const button = document.querySelector('submitBtn');
+    
+  for (let i = 0; i < questions.length; i++) {
+    questions[i+1].classList.add('activeQuestion')
+  }
+  
+  
+}
 
 button.addEventListener("click", (e) => {
-  console.log(e.target)
+  submit(e.currentTarget)
 })
 
 
