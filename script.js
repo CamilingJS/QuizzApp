@@ -3,14 +3,16 @@ const button = document.querySelector('.submitBtn');
 
 const submit = () => {
   for (let i = 0; i < questions.length; i++) {
-    questions[i].classList.remove('activeQuestion')
+
+    if (questions[i].classList.contains('activeQuestion')){
+      questions[i].classList.remove('activeQuestion')
+      questions[i+1].classList.add('activeQuestion')
+      break
+    }
+
   }
     
-  for (let i = 0; i < questions.length; i++) {
-    questions[i+1].classList.add('activeQuestion')
-  }
-  
-  
+
 }
 
 button.addEventListener("click", (e) => {
